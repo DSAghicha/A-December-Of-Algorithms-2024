@@ -1,0 +1,20 @@
+{
+	"name": "dec-of-algo-2024-solutions",
+	"packageManager": "yarn@4.5.3",
+	"scripts": {
+		"test": "mocha --require ts-node/register src/tests/all.spec.ts"
+	},
+	"devDependencies": {
+		"@types/mocha": "^10.0.10",
+		"@types/node": "^22.10.2",
+		"mocha": "11.0.1",
+		"nodemon": "^3.1.9",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.7.2"
+	},
+	"author": {
+		"name": "Darshaan D Aghicha",
+		"url": "https://github.com/DSAghicha"
+	},
+	"private": true
+}
