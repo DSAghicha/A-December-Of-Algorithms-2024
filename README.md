@@ -48,6 +48,11 @@ Check out our FAQ for more information.
 - [**December 20 -  Robot Pathways Problem**](#december-20---robot-pathways-problem)
 - [**December 21 -  The Intersection**](#december-21---the-intersection)
 - [**December 22 -  Earthquake Propagation**](#december-22---earthquake-propagation)
+- [**December 23 -  Crystal Grid**](#december-23---crystal-grid)
+- [**December 24 -  String Permutation Grouping**](#december-24---string-permutation-grouping)
+- [**December 25 -  Task Scheduler**](#december-25---task-scheduler)
+- [**December 26 -  Escape The Lava Field**](#december-26---escape-the-lava-field)
+
 
   
 
@@ -1111,6 +1116,163 @@ Sample I/O 2 :
 Input: buildings = [[1,1,5],[10,10,5]]
 Output: 1
 ```
+
+### December 23 - Crystal Grid
+#### Problem Statement
+```
+In the ancient kingdom, a mystical Crystal Grid of size N x N (where 1 <= N <= 500) holds secrets of immense power.
+Each cell in the grid contains a magical value. To unlock the grid's energy, the wizard has devised a three-step process based on its structure:
+
+Task 1: The Diagonal Energy Difference
+Extract the Primary Energy Path, which is the sum of magical values along the primary diagonal (from the top-left to the bottom-right of the grid).
+Extract the Secondary Energy Path, which is the sum of magical values along the secondary diagonal (from the top-right to the bottom-left of the grid).
+Calculate the absolute difference between these two paths:
+Diagonal_Energy = |Sum_primary - Sum_secondary|
+
+Task 2: The Boundary Energy
+Calculate the Boundary Energy, which is the sum of all magical values located on the boundary of the grid (the outermost rows and columns).
+
+Task 3: The Final Magical Result
+Combine the results to compute the Final Magical Result:
+Final_Result = Diagonal_Energy + Boundary_Energy
+```
+Sample I/O:
+```
+Crystal Grid (N = 3):
+1 2 3  
+4 5 6  
+7 8 9  
+Diagonal Energy Difference:
+
+Primary Diagonal = 1 + 5 + 9 = 15
+Secondary Diagonal = 3 + 5 + 7 = 15
+Diagonal_Energy = |15 - 15| = 0
+Boundary Energy:
+
+Boundary elements = 1, 2, 3, 4, 6, 7, 8, 9
+Boundary_Energy = 1 + 2 + 3 + 4 + 6 + 7 + 8 + 9 = 40
+Final Magical Result:
+Final_Result = Diagonal_Energy + Boundary_Energy = 0 + 40 = 40
+```
+### December 24 - String Permutation Grouping
+#### Problem Statement
+```
+Generate a function that groups the unique permutations of a string based on their
+lexicographical order but extracted in a specific non-standard manner.
+```
+![image](https://github.com/user-attachments/assets/63965430-b425-46de-ad14-0b022631a971)
+```
+1. Given a string s, generate all unique permutations of the string.
+2. A
+er generating the permutations, group them based on their first letter. For
+each letter, list the permutations that start with that letter.
+3. Finally, return a dictionary where each key is the starting letter of the
+permutations, and the value is a list of permutations starting with that letter,
+formatted in lexicographical order.
+```
+Input Format
+```
+● A single string s contains only lowercase letters (1 ≤ length of s ≤ 12). The string
+may contain duplicates.
+```
+Sample Input and Output
+```
+Input 1: abc
+Output 1:
+{
+'a': ['abc', 'acb'],
+'b': ['bac', 'bca'],
+'c': ['cab', 'cba']
+}
+```
+Constraints
+```
+● The function should handle duplicate letters appropriately in the permutations
+(i.e., no duplicate permutations in the output).
+● The output should be sorted for each group in lexicographical order.
+```
+References :
+https://mathworld.wolfram.com/LexicographicOrder.html
+
+
+### December 25 - Task Scheduler
+
+#### Problem Statement
+```
+Design a task scheduler using any data structure where each node contains the task
+description and its priority. The tasks should be arranged in the list based on priority
+(highest priority first). Allow for the following operations:
+• Add a new task with priority.
+• Remove a completed task.
+• Search for Task
+• Display the tasks in priority order.
+```
+![image](https://github.com/user-attachments/assets/d4e81a33-06da-4a28-8933-b7b3ed7af25e)
+
+
+Example Input
+```
+• Add task: (”Complete Assignment”, Priority 2)
+• Add task: (”Buy Groceries”, Priority 1)
+• Display: [(”Complete Assignment”, Priority 2), (”Buy Groceries”, Priority 1)]
+• Remove task: ”Complete Assignment”
+• Final list: [(”Buy Groceries”, Priority 1)]
+
+```
+Output Format
+```
+Use a menu driven Task Scheduler.
+```
+Constraints
+```
+• Try to keep Search time in O(k) ,i.e a constant lookup.
+• Program Should be Modular.
+• The program must compute the result within 1 second.
+```
+Notes
+```
+You can create any sort of data structure for the Scheduler but make sure it is self
+balancing based on priority. For achieving constant lookup time during searching check
+out dynamic hashing. Also a bonus criteria would be:
+• Trying to reduce runtime memory.
+• Storing the Scheduler data locally using file system methods.
+```
+
+
+
+### December 26 - ESCAPE THE LAVA FIELD
+
+#### Problem Statement
+```
+You are standing at the edge of a dangerous lava field, represented as an array of stones.
+Each stone has a number written on it, indicating the maximum number of stones you can
+jump forward from that position. Starting from the first stone, determine if it’s possible to
+safely reach the last stone without falling into the lava.
+Problem Statement:-
+Given an array where each element represents the maximum number of steps you can
+jump forward from that element, return true if we can reach the last index starting from the
+first index. Otherwise, return false.
+```
+![image](https://github.com/user-attachments/assets/157af115-b519-4450-8fc2-a9ba768b7b2a)
+
+Example 1:
+```
+Input:nums = [2, 3, 1, 0, 4]
+Output: True
+Explanation:
+We start at index 0, with value 2 this means we can jump to index 1 or 2.
+From index 1, with value 3, we can jump to index 2, 3, or 4. However, if we jump to index 2
+with value 1, we can only jump to index 3.
+So we jump to index 1 then index 4 reaching the end of the array.
+Hence, we return true.
+```
+Example 2:-
+```
+Input:nums = [3, 2, 1, 0, 4]
+Output: False
+```
+
+
 # FAQ
 
 #### Who can join the Challenge?
