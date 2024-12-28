@@ -52,6 +52,8 @@ Check out our FAQ for more information.
 - [**December 24 -  String Permutation Grouping**](#december-24---string-permutation-grouping)
 - [**December 25 -  Task Scheduler**](#december-25---task-scheduler)
 - [**December 26 -  Escape The Lava Field**](#december-26---escape-the-lava-field)
+- [**December 27 -  Trapping Rain Water**](#december-27---trapping-rain-water)
+- [**December 28 -  Bookshelf Organizer**](#december-28---bookshelf-organizer)
 
 
   
@@ -1240,7 +1242,7 @@ out dynamic hashing. Also a bonus criteria would be:
 
 
 
-### December 26 - ESCAPE THE LAVA FIELD
+### December 26 - Escape The Lava Field
 
 #### Problem Statement
 ```
@@ -1271,8 +1273,76 @@ Example 2:-
 Input:nums = [3, 2, 1, 0, 4]
 Output: False
 ```
+### December 27 - Trapping Rain Water
 
+#### Problem Statement
+```
+Given an array representing bar heights in an elevation map, compute the total units of
+water trapped between bars after raining. The width of each bar is 1. Return the total
+trapped water.
+Problem Statement:-
+Given n non-negative integers representing an elevation map where the width of each bar
+is 1, compute how much water it can trap after raining.
+```
+Example 1:
+```
+Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
+Output: 6
+Explanation: The above elevation map (black section) is represented
+by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water
+(blue section) are being trapped.
+```
+Example 2:-
+```
+Input: height =
+[4,2,0,3,2,5]
+Output: 9
+```
+### December 28 - Bookshelf Organizer
 
+#### Problem Statement
+
+```
+Sonny has several books and wants to organize them into shelves such
+that each shelf contains exactly shelfSize books, and the books on each
+shelf are arranged in sequential order based on their assigned numbers.
+Given an integer array books where books[i] represents the number on the
+ith book and an integer shelfSize, return true if he can organize the books
+this way, or false otherwise.
+```
+
+SAMPLE TEST CASE:
+
+```
+INPUT:
+books = [1, 2, 3, 6, 2, 3, 4, 7, 8]
+shelfSize = 3
+One possible arrangement is:
+Group 1: [1, 2, 3]
+Group 2: [2, 3, 4]
+Group 3: [6, 7, 8]
+OUTPUT:
+So,you return true
+If not possible,you return false.
+```
+
+SAMPLE TEST CASE 2:
+
+```
+books = [1, 2, 3, 4, 5]
+shelfSize = 4
+One possible arrangement is:
+[1, 2, 3, 4]
+But we can’t allot a shelf for the book 5.
+OUTPUT:
+So,you need to return false.
+```
+
+```
+P.S: While a O(N*N) solution will be able to handle small test cases,it will fail
+with large enough ones,so can you come up with a solution that can visit
+each element only once,i.e a O(N) solution?
+```
 # FAQ
 
 #### Who can join the Challenge?
